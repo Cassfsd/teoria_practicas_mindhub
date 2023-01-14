@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="flexbox.css">
+    <style>
+        /*Para comentar en css se utiliza este formato*/
+        /*Flexbox se aplica a los hijos directos del contenedor, por lo que flex deberemos aplicarlo a cada uno de los contenedores en donde queramos que su contenido hijo se vea afectado por el layout de flex. */
+
+        .contenedor {
+            display: flex;
+            width: 600px;
+            height: 50px;
+            justify-content: space-around;
+            background-color: darkmagenta;
+            border: solid 5px rgb(255, 204, 0);
+        }
+
+
+        /*
+        .item1{
+            background-color: coral;
+            width: 100px;
+            border: solid 5px cadetblue;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+         }
+         
+         .item2{
+            background-color: coral;
+            width: 100px;
+            border: solid 5px cadetblue;
+            text-align: center;
+         }
+         .item3{
+            background-color: coral;
+            width: 100px;
+            border: solid 5px cadetblue;
+            text-align: center;
+         }
+         .item4{
+            background-color: coral;
+            width: 100px;
+            border: solid 5px cadetblue;
+            text-align: center;
+         }
+         .item5{
+            background-color: coral;
+            width: 100px;
+            border: solid 5px cadetblue;
+            text-align: center;
+         }
+         .item6{
+            background-color: coral;
+            width: 100px;
+            border: solid 5px cadetblue;
+            text-align: center;
+         }
+
+         Para no repetir todo este código, asigno una class gral para todos los items con el mismo estilo.
+         */
+        .flex_items {
+            background-color: coral;
+            width: 100px;
+            border: solid 5px cadetblue;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+    <title>Flexbox</title>
+</head>
+
+<body>
+    <main>
+        <h1>Main axis (eje x)</h1>
+        <h2>Justifiy Content</h2>
+        <ol><!--Para colocar varias li al mismo tiempo: ul>li*número de li -->
+            <li>flex Start</li>Alinea el contenido a la izquierda
+            <li>flex end</li>Alineamos a la derecha
+            <li>center</li>alinea horizontalmente al centro
+            <li>space-between</li>alinea de forma uniforme los elementos con espacio entre cada uno de ellos, pero no
+            entre el contenedor y el borde del elemento
+            <li>space-around</li> alinear a lo largo del contenedor, ahora si teniendo espacio entre el elemento y el
+            borde del contenedor
+            <li>space-evenly</li>ditribuye los elementos a la misma distancia entre ellos y entre el contenedor y sus
+            bordes
+            <p>Notas: Flexbox se aplica a los hijos directos del contenedor, por lo que flex deberemos aplicarlo a cada uno de los contenedores en donde queramos que su contenido hijo se vea afectado por el layout de flex.</p>
+        </ol>
+        <div class="contenedor">
+            <div class="flex_items">Inicio</div>
+            <div class="flex_items">Servicios</div>
+            <div class="flex_items">Contacto</div>
+            <div class="flex_items">Sobre mi</div>
+            <div class="flex_items">Carrito de compras</div>
+
+            <!--Para agregar todos los div con las clases e items a la vez div>class.item$(la cantidad de $ representa la cantidad de numeros que llevara el item $=! $$=01 y los coloca en orden)-->
+        </div>
+
+    </main>
+</body>
+
+</html>
