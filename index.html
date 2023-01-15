@@ -7,8 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="flexbox.css">
     <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
         /*Para comentar en css se utiliza este formato*/
         /*Flexbox se aplica a los hijos directos del contenedor, por lo que flex deberemos aplicarlo a cada uno de los contenedores en donde queramos que su contenido hijo se vea afectado por el layout de flex. */
+
+
+        /*Estilos justify-content*/
 
         .contenedor {
             display: flex;
@@ -73,6 +80,40 @@
             justify-content: center;
             align-items: center;
         }
+
+
+        /*Estilos flex-direction*/
+
+        .contenedor_1 {
+            display: flex;
+            flex-direction: column;
+            /*Si cambiamos a column, cambia la manera de asignar widht y hight en cuanto a las proporciones ojo, */
+            width: 300px;
+            height: 300px;
+            background-color: darkorange;
+            border: solid rgb(255, 247, 9) 5px;
+            justify-content:center;
+           align-items: center; /*por que queda bien con flex-sart y se ve desalineado con center???????*/
+            
+            
+            
+
+        }
+
+        .flex_items1{
+            display: flex;
+            background-color: aqua;
+            border: solid crimson;
+            list-style: none;
+            width:200px;
+            height: 60px;
+            align-items: center;
+            justify-content: center;
+            
+        }
+
+        /*al ser column el justify-content cambia al eje principal que es el cross axis/Y/column/vertical 
+        Y el align-items pasa a estar en el main axis/X/row/horizontal*/
     </style>
     <title>Flexbox</title>
 </head>
@@ -91,7 +132,9 @@
             borde del contenedor
             <li>space-evenly</li>ditribuye los elementos a la misma distancia entre ellos y entre el contenedor y sus
             bordes
-            <p>Notas: Flexbox se aplica a los hijos directos del contenedor, por lo que flex deberemos aplicarlo a cada uno de los contenedores en donde queramos que su contenido hijo se vea afectado por el layout de flex.</p>
+            <p>Notas: Flexbox se aplica a los hijos directos del contenedor, por lo que flex deberemos aplicarlo a cada
+                uno de los contenedores en donde queramos que su contenido hijo se vea afectado por el layout de flex.
+            </p>
         </ol>
         <div class="contenedor">
             <div class="flex_items">Inicio</div>
@@ -99,10 +142,60 @@
             <div class="flex_items">Contacto</div>
             <div class="flex_items">Sobre mi</div>
             <div class="flex_items">Carrito de compras</div>
-
-            <!--Para agregar todos los div con las clases e items a la vez div>class.item$(la cantidad de $ representa la cantidad de numeros que llevara el item $=! $$=01 y los coloca en orden)-->
         </div>
+<br>
+<br>
 
+
+
+            <h1>Cross axis (eje Y)</h1>
+            <h2>align-items</h2>
+            <ol>
+                <li>flex-start (por defecto)</li>se alinean en la parte superior del contenedor 
+                <li>flex-end</li>se alinean en la parte inferior de nuestro contenedor
+                <li>center</li>
+                <li>stretch</li>los elementos van a ocupar todo el contenedor. Si los elementos a los que va a afectar no tienen una altura establecida, lo toma, sino no. 
+                <li>base-line</li> sitúa los elemntos verticalmente de acuerdo a como este la línea base del contenedpr(alinea el texto), para que quede parejo el texto. 
+                Si yo tengo un elemnto que modifica la linea base y por ejemplo agrego un margin a un elemento, los mueve todos para asegurar que se mantenga el baseline(si está aplicado al contenedor).
+
+                <h2>Align-content</h2>
+                Para aplicarse requiere 2 condiciones:
+                1.Que tenga flex wrap y que haya multilínea
+                <li>flex-start (por defecto)</li>se alinean en la parte superior del contenedor 
+                <li>flex-end</li>se alinean en la parte inferior de nuestro contenedor
+                <li>center</li>
+                <li>stretch</li>los elementos van a ocupar todo el contenedor. Si los elementos a los que va a afectar no tienen una altura establecida, lo toma, sino no. 
+                <li>space-between</li> los elementos los alinea en la parte superior e inferior dejando un espacio en el centro.No deja espacio entre los elementos y su contenedor.
+                <li>space-around</li>deja espacio entre los elementos y su contenedor.
+
+<h2>Gap</h2>añade espacio entre los elementos sin tocar el espacio entre el elemntos y el contendor.
+<h2>Order</h2>posiciona los elementos según el orden que le demos
+
+
+            </ol>
+
+            <!-- Para agregar todos los div con las clases e items a la vez div>class.item$(la cantidad de $ representa la cantidad de numeros que llevara el item $=! $$=01 y los coloca en orden)-->
+        </div>
+        <h2>Flex-direction</h2>
+        <p>Va a permitir manipular la forma en la que se va a mostrar los elementos que están dentro del contenedor de
+            flex. El valor por defecto es row.
+        <ol>
+            <li>row/row-reverse</li>fila / fila invertida
+            <li>column/column-reverse</li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li>Unset/inherit/inicial</li>se usan cuando tenemos varias capaz de flexbox anidadas.
+
+            </p>
+            <ol class="contenedor_1">
+                <li class="flex_items1">Inicio</li>
+                <li class="flex_items1">Servicios</li>
+                <li class="flex_items1">Contacto</li>
+                <li class="flex_items1">Sobre mi </li>
+                <li class="flex_items1">Carrito de compras</li>
+            </ol>
     </main>
 </body>
 
