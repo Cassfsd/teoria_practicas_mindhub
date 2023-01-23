@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+p{
+  margin: 10px ;
+  padding: 5px;
+}
+
+.grid_container {
+    display: grid;
+    column-gap: 20px;
+    /*row-gap: 20px;*/
+    /* place-items: center center;
+    place-content: space-evenly;
+    grid-template-columns: 1fr 5fr 2fr; /*repeat(auto-fill, minmax(200px, 1fr)); acá yo tendría 8 celdas, la primera me ocupa un octavo, la segunda 5 octavos y la tercera 2 octavos.*/
+    grid-template-columns: 100px 200px;
+    grid-template-rows:  200px 100px; /*repeat(5, 100px);
+    /*auto-fill acá le estoy indicando que repita en las 5 filas esos 100px a lo horizontal, porque es row. */
+    border: solid black 3px;
+}
+
+
+
+.item1 {
+    width: 100%; /* con este widht va a pintar de azul todo el "item1"*/
+    max-height: 100%;
+    background-color: aqua;
+
+}
+
+.item2 {
+    width: 100%;
+    max-height: 100%;
+    background-color: blueviolet;
+}
+
+.item3 {
+    width: 100%;
+    max-height: 100%;
+    background-color: coral;
+
+}
+
+.item4 {
+    width: 100%;
+    max-height: 100%;
+    background-color:
+        rgb(30, 255, 0);
+}
+
+.item5 {
+    width: 100%;
+    max-height: 100%;
+    background-color: rgb(226, 58, 43);
+}
+
+.item6 {
+    width: 100%;
+    max-height: 100%;
+    background-color: rgb(187, 18, 173);
+
+}
+
+
+.grid_container {
+    display: grid;
+    column-gap: 20px;
+    row-gap: 20px;
+    height:100%;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.item1 {
+    width: 100%;
+    max-height: 100%;
+    background-color: rgb(226, 58, 43);
+    background-image: url(https://conpochoclos.com/wp-content/uploads/2023/01/Harvey-Guillen-es-Perrito-768x512.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: solid black 2px;
+}
+
+.item6 {
+    width: 100%;
+    max-height: 100%;
+    background-color: rgb(187, 18, 173);
+
+}
+.grid_container_item1>div{ /*revisar */
+    position: absolute;
+    top: 0;
+    left: 0;
+    font: weight 50px; ;
+    height: 30%;
+    width: 100%;
+    display: grid;
+    place-items: center center;
+    background: linear-gradient( rgba (255, 255, 255, 0.5), rgba (255, 255, 255, 0.5))
+    color: linear-gradient( rgba (255, 255, 255, 0.5), rgba (255, 255, 255, 0.5))
+}

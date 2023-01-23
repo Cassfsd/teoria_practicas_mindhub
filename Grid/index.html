@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/grid.css">
+    <title>Grid</title>
+</head>
+
+<body>
+    <p> 
+    La estructura del grid tiene que estar definidas por ambas, filas y columnas, si solo coloco una o la otra no va a mostrar la estructura.
+    Grid con fracciones: se modifican de acuerdo al tamaño del contendor padre.
+    Podemos usar px pero es un valor fijo.<br><br>
+
+    -La función minmax(), se utiliza para definir rangos flexibles de celda. 
+    -Función repeat, permite mediante auto-fill y auto-fit indicarle al navegador que rellene o ajuste el contenedor grid con múltiples elementos hijos, dependiendo del tamaño del viewport.<br><br>
+
+    Ejemplo: repeat(auto-fill,minmax(300px, 1fr)). "Se van a repetir las filas Se encarga de que los elementos hijos con el tamaño mínimo queden en la primera fila y los que no caben, se desplazan a la siguiente fila del grid. <br><br>
+
+    <div class="grid_container">
+        <div class="item1"></div>
+        <div class="item2">2</div>
+        <div class="item3">3</div>
+        <div class="item4">4</div>
+        <div class="item5">5</div>
+        <div class="item6">6</div>
+        <div class="item7">7</div>
+        <div class="item8">8</div>
+        <div class="item9">9</div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,120 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-size: 18px;
+    margin: 10px;
+}
+
+        
+.justify-style{
+    display: flex;
+    flex-direction: column;
+    margin: 10px 10px;
+    background-color: rgb(132, 162, 163);
+}
+.justify-style li{
+    padding: 5px;
+    border: solid rgb(244, 244, 249) 2px;
+    
+}
+
+/*Para comentar en css se utiliza este formato*/
+/*Flexbox se aplica a los hijos directos del contenedor, por lo que flex deberemos aplicarlo a cada uno de los contenedores en donde queramos que su contenido hijo se vea afectado por el layout de flex. */
+
+
+/*Estilos justify-content*/
+
+.contenedor {
+    display: flex;
+    width: 600px;
+    height: 50px;
+    justify-content: space-around;
+    background-color: darkmagenta;
+    border: solid 5px rgb(255, 204, 0);
+}
+
+
+/*
+.item1{
+    background-color: coral;
+    width: 100px;
+    border: solid 5px cadetblue;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+ 
+ .item2{
+    background-color: coral;
+    width: 100px;
+    border: solid 5px cadetblue;
+    text-align: center;
+ }
+ .item3{
+    background-color: coral;
+    width: 100px;
+    border: solid 5px cadetblue;
+    text-align: center;
+ }
+ .item4{
+    background-color: coral;
+    width: 100px;
+    border: solid 5px cadetblue;
+    text-align: center;
+ }
+ .item5{
+    background-color: coral;
+    width: 100px;
+    border: solid 5px cadetblue;
+    text-align: center;
+ }
+ .item6{
+    background-color: coral;
+    width: 100px;
+    border: solid 5px cadetblue;
+    text-align: center;
+ }
+
+ Para no repetir todo este código, asigno una class gral para todos los items con el mismo estilo.
+ */
+.flex_items {
+    background-color: coral;
+    width: 100px;
+    border: solid 5px cadetblue;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*Estilos flex-direction*/
+
+.contenedor_1 {
+    display: flex;
+    flex-direction: column;
+    /*Si cambiamos a column, cambia la manera de asignar widht y hight en cuanto a las proporciones ojo, */
+    width: 300px;
+    height: 300px;
+    background-color: darkorange;
+    border: solid rgb(255, 247, 9) 5px;
+    justify-content: center;
+    align-items: center;
+    /*por que queda bien con flex-sart y se ve desalineado con center???????*/
+}
+
+.flex_items1 {
+    display: flex;
+    background-color: aqua;
+    border: solid crimson;
+    list-style: none;
+    width: 200px;
+    height: 60px;
+    align-items: center;
+    justify-content: center;
+}
+
+/*al ser column el justify-content cambia al eje principal que es el cross axis/Y/column/vertical 
+Y el align-items pasa a estar en el main axis/X/row/horizontal*/

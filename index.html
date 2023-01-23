@@ -6,115 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="flexbox.css">
-    <style>
-        *{
-            padding: 0;
-            margin: 0;
-        }
-        /*Para comentar en css se utiliza este formato*/
-        /*Flexbox se aplica a los hijos directos del contenedor, por lo que flex deberemos aplicarlo a cada uno de los contenedores en donde queramos que su contenido hijo se vea afectado por el layout de flex. */
 
 
-        /*Estilos justify-content*/
-
-        .contenedor {
-            display: flex;
-            width: 600px;
-            height: 50px;
-            justify-content: space-around;
-            background-color: darkmagenta;
-            border: solid 5px rgb(255, 204, 0);
-        }
 
 
-        /*
-        .item1{
-            background-color: coral;
-            width: 100px;
-            border: solid 5px cadetblue;
-            text-align: center;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-         }
-         
-         .item2{
-            background-color: coral;
-            width: 100px;
-            border: solid 5px cadetblue;
-            text-align: center;
-         }
-         .item3{
-            background-color: coral;
-            width: 100px;
-            border: solid 5px cadetblue;
-            text-align: center;
-         }
-         .item4{
-            background-color: coral;
-            width: 100px;
-            border: solid 5px cadetblue;
-            text-align: center;
-         }
-         .item5{
-            background-color: coral;
-            width: 100px;
-            border: solid 5px cadetblue;
-            text-align: center;
-         }
-         .item6{
-            background-color: coral;
-            width: 100px;
-            border: solid 5px cadetblue;
-            text-align: center;
-         }
-
-         Para no repetir todo este código, asigno una class gral para todos los items con el mismo estilo.
-         */
-        .flex_items {
-            background-color: coral;
-            width: 100px;
-            border: solid 5px cadetblue;
-            text-align: center;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-
-        /*Estilos flex-direction*/
-
-        .contenedor_1 {
-            display: flex;
-            flex-direction: column;
-            /*Si cambiamos a column, cambia la manera de asignar widht y hight en cuanto a las proporciones ojo, */
-            width: 300px;
-            height: 300px;
-            background-color: darkorange;
-            border: solid rgb(255, 247, 9) 5px;
-            justify-content:center;
-           align-items: center; /*por que queda bien con flex-sart y se ve desalineado con center???????*/
-            
-            
-            
-
-        }
-
-        .flex_items1{
-            display: flex;
-            background-color: aqua;
-            border: solid crimson;
-            list-style: none;
-            width:200px;
-            height: 60px;
-            align-items: center;
-            justify-content: center;
-            
-        }
-
-        /*al ser column el justify-content cambia al eje principal que es el cross axis/Y/column/vertical 
-        Y el align-items pasa a estar en el main axis/X/row/horizontal*/
-    </style>
     <title>Flexbox</title>
 </head>
 
@@ -122,20 +17,25 @@
     <main>
         <h1>Main axis (eje x)</h1>
         <h2>Justifiy Content</h2>
-        <ol><!--Para colocar varias li al mismo tiempo: ul>li*número de li -->
-            <li>flex Start</li>Alinea el contenido a la izquierda
-            <li>flex end</li>Alineamos a la derecha
-            <li>center</li>alinea horizontalmente al centro
-            <li>space-between</li>alinea de forma uniforme los elementos con espacio entre cada uno de ellos, pero no
-            entre el contenedor y el borde del elemento
-            <li>space-around</li> alinear a lo largo del contenedor, ahora si teniendo espacio entre el elemento y el
-            borde del contenedor
-            <li>space-evenly</li>ditribuye los elementos a la misma distancia entre ellos y entre el contenedor y sus
-            bordes
-            <p>Notas: Flexbox se aplica a los hijos directos del contenedor, por lo que flex deberemos aplicarlo a cada
-                uno de los contenedores en donde queramos que su contenido hijo se vea afectado por el layout de flex.
-            </p>
+
+        <ol class="justify-style"><!--Para colocar varias li al mismo tiempo: ul>li*número de li -->
+            <li>flex Start:alinea el contenido a la izquierda.</li>
+            <li>flex end:alineamos a la derecha.</li>
+            <li>center:alinea horizontalmente al centro.</li>
+            <li>space-between:alinea de forma uniforme los elementos con espacio entre cada uno de ellos, pero no
+                entre el contenedor y el borde del elemento.</li>
+            <li>space-around:alinear a lo largo del contenedor, ahora si teniendo espacio entre el elemento y el
+                borde del contenedor.</li>
+            <li>space-evenly:ditribuye los elementos a la misma distancia entre ellos y entre el contenedor y sus
+                bordes.
+                <br>
         </ol>
+        <p>Notas: Flexbox se aplica a los hijos directos del contenedor, por lo que flex deberemos aplicarlo a cada
+            uno de los contenedores en donde queramos que su contenido hijo se vea afectado por el layout de flex.<br>
+            Al ser column el justify-content cambia al eje principal que es el cross axis-Y/column/vertical. <br>
+            Y el align-items pasa a estar en el main axis-X/row/horizontal.
+        </p> <br><br>
+        <h3>Ejemplo. Ver CSS</h3>
         <div class="contenedor">
             <div class="flex_items">Inicio</div>
             <div class="flex_items">Servicios</div>
@@ -143,42 +43,50 @@
             <div class="flex_items">Sobre mi</div>
             <div class="flex_items">Carrito de compras</div>
         </div>
-<br>
-<br>
+        <br>
+        <br>
 
 
 
-            <h1>Cross axis (eje Y)</h1>
-            <h2>align-items</h2>
-            <ol>
-                <li>flex-start (por defecto)</li>se alinean en la parte superior del contenedor 
-                <li>flex-end</li>se alinean en la parte inferior de nuestro contenedor
-                <li>center</li>
-                <li>stretch</li>los elementos van a ocupar todo el contenedor. Si los elementos a los que va a afectar no tienen una altura establecida, lo toma, sino no. 
-                <li>base-line</li> sitúa los elemntos verticalmente de acuerdo a como este la línea base del contenedpr(alinea el texto), para que quede parejo el texto. 
-                Si yo tengo un elemnto que modifica la linea base y por ejemplo agrego un margin a un elemento, los mueve todos para asegurar que se mantenga el baseline(si está aplicado al contenedor).
+        <h1>Cross axis (eje Y)</h1>
+        <h2>Align-items</h2>
+        <ol>
+            <li>flex-start(por defecto):se alinean en la parte superior del contenedor.</li>
+            <li>flex-end</li>se alinean en la parte inferior de nuestro contenedor.
+            <li>center</li> centra los elementos de manera vertical.
+            <li>stretch</li>los elementos van a ocupar todo el contenedor. Si los elementos a los que va a afectar no
+            tienen una altura establecida, lo toma, sino no.
+            <li>base-line</li> sitúa los elemntos verticalmente de acuerdo a como este la línea base del
+            contenedpr(alinea el texto), para que quede parejo el texto.
+            Si yo tengo un elemnto que modifica la linea base y por ejemplo agrego un margin a un elemento, los mueve
+            todos para asegurar que se mantenga el baseline(si está aplicado al contenedor).
+            <br><br>
 
-                <h2>Align-content</h2>
-                Para aplicarse requiere 2 condiciones:
-                1.Que tenga flex wrap y que haya multilínea
-                <li>flex-start (por defecto)</li>se alinean en la parte superior del contenedor 
-                <li>flex-end</li>se alinean en la parte inferior de nuestro contenedor
-                <li>center</li>
-                <li>stretch</li>los elementos van a ocupar todo el contenedor. Si los elementos a los que va a afectar no tienen una altura establecida, lo toma, sino no. 
-                <li>space-between</li> los elementos los alinea en la parte superior e inferior dejando un espacio en el centro.No deja espacio entre los elementos y su contenedor.
-                <li>space-around</li>deja espacio entre los elementos y su contenedor.
+            <h2>Align-content</h2><br>
+            Para aplicarse requiere 2 condiciones:<br>
+            1.Que tenga flex wrap y que haya multilínea:<br>
+            <li>flex-start (por defecto)</li>se alinean en la parte superior del contenedor.
+            <li>flex-end</li>se alinean en la parte inferior de nuestro contenedor.
+            <li>center</li>
+            <li>stretch</li>los elementos van a ocupar todo el contenedor. Si los elementos a los que va a afectar no
+            tienen una altura establecida, lo toma, sino no.
+            <li>space-between</li> los elementos los alinea en la parte superior e inferior dejando un espacio en el
+            centro.No deja espacio entre los elementos y su contenedor.
+            <li>space-around</li>deja espacio entre los elementos y su contenedor.
+            <br><br>
 
-<h2>Gap</h2>añade espacio entre los elementos sin tocar el espacio entre el elemntos y el contendor.
-<h2>Order</h2>posiciona los elementos según el orden que le demos
+            <h2>Gap</h2>añade espacio entre los elementos sin tocar el espacio entre el elemntos y el contendor.
+            <h2>Order</h2>posiciona los elementos según el orden que le demos.
 
 
-            </ol>
-
-            <!-- Para agregar todos los div con las clases e items a la vez div>class.item$(la cantidad de $ representa la cantidad de numeros que llevara el item $=! $$=01 y los coloca en orden)-->
+        </ol>
+        <br><br>
+        <!-- Para agregar todos los div con las clases e items a la vez div>class.item$(la cantidad de $ representa la cantidad de numeros que llevara el item $=! $$=01 y los coloca en orden)-->
         </div>
-        <h2>Flex-direction</h2>
+        <h1>Flex-direction</h1><br><br>
         <p>Va a permitir manipular la forma en la que se va a mostrar los elementos que están dentro del contenedor de
             flex. El valor por defecto es row.
+            <br>
         <ol>
             <li>row/row-reverse</li>fila / fila invertida
             <li>column/column-reverse</li>
@@ -186,7 +94,7 @@
             <li></li>
             <li></li>
             <li></li>
-            <li>Unset/inherit/inicial</li>se usan cuando tenemos varias capaz de flexbox anidadas.
+            <li>Unset/inherit/inicial</li>se usan cuando tenemos varias capaz de flexbox anidadas. <br><br>
 
             </p>
             <ol class="contenedor_1">
@@ -196,6 +104,187 @@
                 <li class="flex_items1">Sobre mi </li>
                 <li class="flex_items1">Carrito de compras</li>
             </ol>
+            <br><br>
+            <h1>Display</h1><br><br>
+            <p>Elementos de bloque: tienen por defecto la propiedad display:block, ocupan el 100% del ancho.
+                display-inline: (elementos "anchor son un ejemplo).
+                inline-block:son elementos block y mantienen esas propiedades, pero me alinea los elementos en una sola
+                linea.
+            </p>
+            <br>
+            <br>
+
+
+
+
+
+            <!------------------------------------------------------->
+            <h1>Grid Layout</h1>
+            <p>Ofrece un sistema de diseño con filas y columnas (cuadrícula) para facilitar el diseño. Para poder utilizarlo se deben aplicar ambos:rows y columns. 
+                Consta de un elemento principal y más elementos secundarios.
+                Los elementos HTML a los que apliquemos el display:grid o display:inline-grid(elemento en bloque) o
+                display:inline-grid(elemento in-line), esto se aplica también a Los hijos de ese container con
+                característica grid.
+            </p>
+            <h2>Propiedades de los padres</h2>
+            <h3>justify content</h3>
+            <p>Si le coloco auto en grid-template-row/column ese justify junto al auto lo que harán es que me va a
+                centrar todo y el auto hará que solo se ocupe lo justo y necesario.
+
+                -Space-evenly: me separa cada fila/columna con espacio entre los bordes.
+                Tenemos también space-around y space between.
+                Además tenemos start: alinea al principio
+                y el end: alinea al final. Es lo mismo que hace en Flexbox.
+            </p>
+
+            <h2>Align-content(vertical)</h2>
+            <p>Para aplicarlo, el container debería tener un height,sino no se visualiza el cambio.
+                Manejamos las mismas propiedades que en FLexbox.
+            </p>
+            <h2>Propiedades de los hijos</h2><br>
+            <p>El valor de grid column se define con las líneas entre columna y columna (ejemplo, si tenemos 3 columnas,
+                tenemos 4 lineas de referencia), si le digo 1/3 va a empezar en la linea 1 y va a terminar en la 3.
+                Otra forma de hacerlo es colocar 1/ span 2 y acá va a empezar en la linea 1 y va a ocupar 2 columnas.
+
+                Grid-row es lo mismo pero en horizontal.
+                -Grid-area:engloba a las 2 anteriores. le podemos colocar hasta 4 valores:
+                Primer valor: en que fila comienza
+                Segundo valor:en que columna empieza
+                Tercer valor: en que fila termina
+                Cuarto valor: en que columna termina
+
+                -Grid-template-areas: 'header header header'
+                'menu main aside'
+                'footer footer footer
+
+                Esto lo aplico al contenedor y al item le digo cuanto quiero que ocupe. Ver estilos.
+
+            </p>
+
+
+
+            <div class="grid_container">
+                <div class="item1">1</div>
+                <div class="item2">2</div>
+                <div class="item3">3</div>
+                <div class="item4">4</div>
+                <div class="item5">5</div>
+                <div class="item6">6</div>
+                <div class="item7">7</div>
+                <div class="item8">8</div>
+                <div class="item9">9</div>
+
+
+            </div>
+            <style>
+                .grid_container {
+                    display: grid;
+                    /*para crear o inicializar la rejilla*/
+                    height: 400px;
+                    background-color: rgb(166, 140, 34);
+                    /*si aplicamos un justify o align se ve este fondo*/
+                    grid-template-columns: auto auto auto;
+                    /*ya me define las columnas, 1 por cada auto que ponga, calcula el tamaño de cada columna de forma automatica, si agrandas pantalla, se mueven para ocupar el ancho de pantalla.
+        También puedo definir pixeles*/
+                    grid-template-rows: auto auto auto;
+                    grid-template-areas: 'header header header'
+                        'menu main aside'
+                        'footer footer footer';
+                }
+
+                .grid_container div {
+                    background-color: crimson;
+                    text-align: center;
+                    color: white;
+                    border: 1px solid black;
+                }
+
+                /*.item1{
+        grid-column:; /*el valor de grid column se define con las líneas entre columna y columna (ejemplo, si tenemos 3 columnas, tenemos 4 lineas de referencia), si le digo 1/3 va a empezar en la linea 1 y va a terminar en la 3.*/
+
+
+
+                .item1 {
+                    grid-area: header;
+                }
+
+                .item2 {
+                    grid-area: menu;
+                }
+
+                .item3 {
+                    grid-area: main;
+                }
+
+                .item4 {
+                    grid-area: aside;
+                }
+
+                .item5 {
+                    grid-area: footer;
+                }
+            </style>
+            <br>
+
+
+
+ <h1>Unidades relativas y absolutas</h1>
+            <h2>Absolutas:son fijas, cambian su valor. No son tan utilizadas en diseño web.</h2>
+            <p> px:depende de la resolución del dispositivo.Por defecto el navegador trae 16px.</p>
+
+
+            <h2>Relativas: dependen de algún factor. Como el tamaño de letra del elemento principal o al tamaño del
+                dispositivo. </h2>
+            <p>
+                em: es relativa al tamaño de la letra del elemento padre, para font-size y tamaño de la fuente del
+                propio
+                elemento para propiedades como width.
+
+                rem: es una medida de font-size, por defecto es = a 16px
+
+                vw/vh: es el 1% del ancho/alto de la ventana.
+                em(depende del tamaño de la letras)
+            </p>
+            <div id="contenedor_principal">
+                <div class="rectangulo px">200px de ancho</div>
+                <div class="rectangulo vw">20 vw de ancho</div>
+                <div class="rectangulo em">15em de ancho</div>
+            </div>
+
+            <style>
+                #contenedor_principal {
+                    color: white;
+                    padding: 5px;
+                    font-size: 10px;
+                    background-color: crimson;
+                }
+
+                .rectangulo {
+                    padding: 5px;
+                    margin: 5px;
+                }
+
+                .px {
+                    background-color: cornflowerblue;
+                    width: 200px;
+                    /*se mantiene igual con los diferentes tamaños del navegador*/
+                }
+
+                .vw {
+                    background-color: blueviolet;
+                    width: 20vw;
+                    /*ocupa el 20% del contenedor,  se adapta al cambiar el tamaño del navegador, es relativa a este tamaño de la ventana del navegador.Muy útil para sitios responsive*/
+                }
+
+                .em {
+                    background-color: darksalmon;
+                    width: 15em;
+                    /*es relativa al tamaño del texto del contenedor.*/
+                    font-size: 1.5em;
+                    /*Se puede usar para adaptar el tamaño de letra del contenedor interno. Acá el tamaño de la letra va a ser 1.5 veces el tamaño de letra de su contenedor padre    */
+                }
+            </style>
+
     </main>
 </body>
 
